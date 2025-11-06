@@ -77,26 +77,6 @@ public class BallTest{
         assertTrue(novaDirecaoY < 0, "A bola deve inverter e mover-se para cima após colisão com o chão.");
     }
 
-    private void setPrivateField(Ball bola, String fieldName, double value) {
-        try {
-            var field = Ball.class.getDeclaredField(fieldName);
-            field.setAccessible(true);
-            field.set(bola, value);
-        } catch (Exception e) {
-            fail("Erro ao ajustar o campo privado " + fieldName + ": " + e.getMessage());
-        }
-    }
-
-    private double getPrivateField(Ball bola, String fieldName) {
-        try {
-            var field = Ball.class.getDeclaredField(fieldName);
-            field.setAccessible(true);
-            return field.getDouble(bola);
-        } catch (Exception e) {
-            fail("Erro ao ler o campo privado " + fieldName + ": " + e.getMessage());
-            return 0;
-        }
-    }
 }
 
 

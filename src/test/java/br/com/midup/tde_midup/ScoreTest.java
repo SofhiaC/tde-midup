@@ -18,13 +18,13 @@ public class ScoreTest {
     }
 
     @Test //verifica se o placar inicial é zero
-    public void testInitialScoreIsZero() {
+    public void testInicialZero() {
         assertEquals(0, player1Score.getScore(), "Placar inicial deve ser zero");
         assertEquals(0, player2Score.getScore(), "Placar inicial deve ser zero");
     }
 
     @Test //verifica se o incremento do placar está correto
-    public void testIncrementScore() {
+    public void testIncrementaPlacar() {
         player1Score.inc(); //+1
         assertEquals(1, player1Score.getScore(), "O placar deve ser incrementado corretamente");
         player1Score.inc(); //+1
@@ -32,7 +32,7 @@ public class ScoreTest {
     }
 
     @Test //verifica se os placares dos jogadores são independentes
-    public void testIndependentScores() {
+    public void testPlacarIndependente() {
         player1Score.inc(); //+1 pro player 1
         player1Score.inc(); //+1 pro player 1
         player2Score.inc(); //+1 pro player 2
